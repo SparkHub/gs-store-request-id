@@ -1,0 +1,25 @@
+AllCops:
+  Exclude:
+    - 'spec/**/*'
+
+Metrics/LineLength:
+  Max: 100
+
+Metrics/MethodLength:
+  CountComments: false  # count full line comments?
+  Max: 15
+
+Metrics/BlockLength:
+  Exclude:
+    - '*.gemspec'
+
+Style/Documentation:
+  Enabled: false
+
+# fix for codeclimate
+Style/PercentLiteralDelimiters:
+  PreferredDelimiters:
+    default: ()
+    '%i': '[]'
+    '%w': '[]'
+    '%W': '[]'

@@ -1,0 +1,14 @@
+---
+TooManyStatements:
+  enabled: true
+  max_statements: 10
+
+# Directories below will not be scanned at all
+exclude_paths:
+  - spec
+
+LongParameterList:
+  max_params: 4
+
+IrresponsibleModule:
+  enabled: false

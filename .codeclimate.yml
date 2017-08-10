@@ -1,0 +1,27 @@
+---
+engines:
+  reek:
+    enabled: true
+  duplication:
+    enabled: true
+    config:
+      languages:
+        ruby:
+          mass_threshold: 26
+  fixme:
+    enabled: true
+    checks:
+      TODO:
+        enabled: false
+  rubocop:
+    enabled: true
+ratings:
+  paths:
+  - Gemfile.lock
+  - '**.erb'
+  - '**.rb'
+exclude_paths:
+- spec/
+- config/
+- db/
+- vendor/
