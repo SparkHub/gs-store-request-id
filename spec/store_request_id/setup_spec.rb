@@ -2,14 +2,14 @@ require 'spec_helper'
 
 describe StoreRequestId::Setup do
   let(:fake_config) do
-    class Configuration
+    class FakeSetupConfiguration
       attr_accessor :city
     end
-    Configuration
+    FakeSetupConfiguration
   end
 
   let(:fake_module) do
-    module FakeModule
+    module FakeSetupModule
       extend StoreRequestId::Setup
     end
   end

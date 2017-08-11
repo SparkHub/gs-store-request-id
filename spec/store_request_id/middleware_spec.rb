@@ -22,7 +22,7 @@ describe StoreRequestId::Middleware do
 
     it 'should store the request id within a RequestStore' do
       app.call('action_dispatch.request_id' => uuid)
-      expect(RequestStore.store[:x_request_id]).to eq(uuid)
+      expect(StoreRequestId.request_id).to eq(uuid)
     end
   end
 end

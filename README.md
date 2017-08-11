@@ -25,11 +25,13 @@ Or install it yourself as:
 
     $ gem install store_request_id
 
-_**Using without rails:** If you're not using Rails, you need to insert StoreRequestId::Middleware into your middleware stack._
+_**Using without rails:** If you're not using Rails, you need to insert `StoreRequestId::Middleware` into your middleware stack._
 
 ## Usage
 
-By default, the `RequestStore` key where the `request_id` is stored is `:x_request_id`. This value can be accessed wherever in the code with `RequestStore.store[:x_request_id]`. That key can be personalized as follow:
+By default, `RequestStore` will be used as a data store. The `request_id` will be stored within a `:x_request_id` key. This value can be accessed wherever in the code with `StoreRequestId.request_id`.
+
+If for some reason you want to personalize that key (collision for example), you can do so with:
 ```ruby
 # config/initializers/store_request_id.rb
 StoreRequestId.configuration.request_store_key = :my_key
