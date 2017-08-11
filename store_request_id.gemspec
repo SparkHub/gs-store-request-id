@@ -7,8 +7,8 @@ require 'store_request_id/version'
 Gem::Specification.new do |spec|
   spec.name          = 'store_request_id'
   spec.version       = StoreRequestId::VERSION
-  spec.authors       = ['Maxime Chaisse-Leal']
-  spec.email         = ['maxime.chaisseleal@gmail.com']
+  spec.authors       = ['Guidespark', 'Maxime Chaisse-Leal']
+  spec.email         = ['sysadmin@guidespark.com', 'maxime.chaisseleal@gmail.com']
 
   spec.summary       = 'Store the unique request id within a global state (RequestStore).'
   spec.description   = 'Store the unique request id within a global state (RequestStore).'
