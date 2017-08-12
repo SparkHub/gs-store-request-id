@@ -1,4 +1,4 @@
-[![Gem Version](https://badge.fury.io/rb/gs-store-request-id.svg)](http://badge.fury.io/rb/gs-store-request-id)
+[![Gem Version](https://badge.fury.io/rb/store_request_id.svg)](http://badge.fury.io/rb/store_request_id)
 [![Build Status](https://travis-ci.org/SparkHub/gs-store-request-id.svg?branch=master)](https://travis-ci.org/SparkHub/gs-store-request-id)
 [![Code Climate](https://codeclimate.com/github/SparkHub/gs-store-request-id/badges/gpa.svg)](https://codeclimate.com/github/SparkHub/gs-store-request-id)
 [![Test Coverage](https://codeclimate.com/github/SparkHub/gs-store-request-id/badges/coverage.svg)](https://codeclimate.com/github/SparkHub/gs-store-request-id/coverage)
