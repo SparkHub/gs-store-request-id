@@ -10,5 +10,6 @@ end
 
 group :test do
   gem 'codeclimate-test-reporter', require: false if RUBY_VERSION >= '2.0'
+  gem 'request_store', '>= 1.1'
   gem 'simplecov', require: false
 end

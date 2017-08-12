@@ -10,8 +10,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ['Guidespark', 'Maxime Chaisse-Leal']
   spec.email         = ['sysadmin@guidespark.com', 'maxime.chaisseleal@gmail.com']
 
-  spec.summary       = 'Store the unique request id within a global state (RequestStore).'
-  spec.description   = 'Store the unique request id within a global state (RequestStore).'
+  spec.summary       = 'Store the unique request id within a global state.'
+  spec.description   = 'Store the unique request id within a global state.'
   spec.homepage      = 'https://github.com/SparkHub/gs-store-request-id'
   spec.license       = 'MIT'
 
@@ -24,7 +24,6 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency 'actionpack', '>= 3.0.2'
   spec.add_dependency 'activesupport', RUBY_VERSION >= '2.2.2' ? '>= 3.0.2' : '< 5.1.3'
-  spec.add_dependency 'request_store', '>= 1.1'
 
   spec.add_development_dependency 'bundler', '~> 1.14'
   spec.add_development_dependency 'rake', '~> 10.0'

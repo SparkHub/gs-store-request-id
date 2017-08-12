@@ -1,28 +1,22 @@
 require 'spec_helper'
 require 'securerandom'
+require 'active_support/concern'
+require 'active_support/deprecation'
+require 'action_dispatch/http/mime_type'
+require 'action_dispatch/http/request'
+require 'action_dispatch/middleware/request_id'
 
 describe StoreRequestId::RequestId do
-  let(:fake_module) do
-    module FakeRequestIdModule
-      extend StoreRequestId::RequestId
-
-      def self.configuration
-        OpenStruct.new(request_store_key: :default_key)
-      end
-    end
-    FakeRequestIdModule
-  end
-
   context '#request_id' do
-    it { expect(fake_module).to respond_to(:request_id) }
+    it { expect(StoreRequestId).to respond_to(:request_id) }
   end
 
   context '#request_id=' do
     let(:uuid) { SecureRandom.uuid }
 
     it 'should set the new value' do
-      expect{ fake_module.request_id = uuid }.to \
-        change{ fake_module.request_id }.from(nil).to(uuid)
+      expect{ StoreRequestId.request_id = uuid }.to \
+        change{ StoreRequestId.request_id }.to(uuid)
     end
   end
 end

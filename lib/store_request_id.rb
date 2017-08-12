@@ -2,6 +2,7 @@
 
 require 'store_request_id/version'
 require 'store_request_id/setup'
+require 'store_request_id/store'
 require 'store_request_id/request_id'
 
 module StoreRequestId
