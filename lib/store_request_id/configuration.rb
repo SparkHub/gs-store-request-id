@@ -1,23 +1,26 @@
 # frozen_string_literal: true
 
+require_relative 'defaults/storage'
+
 module StoreRequestId
+  # :reek:Attribute
+  # :reek:InstanceVariableAssumption
   class Configuration
-    # :reek:Attribute
-    attr_accessor :request_store_key
+    attr_accessor :storage_key
+
+    def storage
+      @storage.caller
+    end
+
+    def storage=(store)
+      @storage = Store.new(store)
+    end
 
     private
 
     def initialize
-      self.request_store_key = store_key
-    end
-
-    def header_key
-      request_id_class = ::ActionDispatch::RequestId
-      defined?(request_id_class::X_REQUEST_ID) ? request_id_class::X_REQUEST_ID : 'X-Request-Id'
-    end
-
-    def store_key
-      header_key.downcase.tr('-', '_').to_sym
+      self.storage_key = Defaults::Storage.generate_key
+      self.storage     = proc { Thread.current }
     end
   end
 end

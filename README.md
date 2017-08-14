@@ -7,7 +7,7 @@
 
 # StoreRequestId
 
-Middleware storing the unique [requestId](https://github.com/rails/rails/blob/master/actionpack/lib/action_dispatch/middleware/request_id.rb) into a [RequestStore](https://github.com/steveklabnik/request_store) in order to access it anytime.
+Middleware storing the unique [requestId](https://github.com/rails/rails/blob/master/actionpack/lib/action_dispatch/middleware/request_id.rb) into a global value in order to access it anytime.
 
 ## Installation
 
@@ -29,15 +29,36 @@ _**Using without rails:** If you're not using Rails, you need to insert `StoreRe
 
 ## Usage
 
-By default, `RequestStore` will be used as a data store. The `request_id` will be stored within a `:x_request_id` key. This value can be accessed wherever in the code with `StoreRequestId.request_id`.
+By default, `Thread.current` will be used as a data store. The `request_id` will be stored within a `:x_request_id` key. This value can be accessed wherever in the code with `StoreRequestId.request_id`.
+
+## Configuration
+
+- **Storage object**
+
+The storage can be changed. Storage objects must have `[]` and `[]=` methods. A proc should be sent to the configuration.
+Here is an example with the [RequestStore gem](https://github.com/steveklabnik/request_store).
+```ruby
+# RequestStore needs to be installed prior
+# Gemfile
+gem 'request_store', '~> 1.1'
+
+# config/initializers/store_request_id.rb
+StoreRequestId.configuration.storage = proc { RequestStore }
+# OR
+StoreRequestId.configure do |config|
+  config.storage = proc { RequestStore }
+end
+```
+
+- **Storage key**
 
 If for some reason you want to personalize that key (collision for example), you can do so with:
 ```ruby
 # config/initializers/store_request_id.rb
-StoreRequestId.configuration.request_store_key = :my_key
+StoreRequestId.configuration.storage_key = :my_key
 # OR
 StoreRequestId.configure do |config|
-  config.request_store_key = :my_key
+  config.storage_key = :my_key
 end
 ```
 

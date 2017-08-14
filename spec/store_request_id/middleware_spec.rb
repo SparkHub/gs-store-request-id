@@ -1,5 +1,4 @@
 require 'spec_helper'
-require 'request_store'
 require 'securerandom'
 require 'active_support/concern'
 require 'active_support/deprecation'
@@ -20,7 +19,7 @@ describe StoreRequestId::Middleware do
   context 'store request id' do
     let(:uuid) { SecureRandom.uuid }
 
-    it 'should store the request id within a RequestStore' do
+    it 'should store the request id within a global storage' do
       app.call('action_dispatch.request_id' => uuid)
       expect(StoreRequestId.request_id).to eq(uuid)
     end
