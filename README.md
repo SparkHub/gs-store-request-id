@@ -14,7 +14,7 @@ Middleware storing the unique [requestId](https://github.com/rails/rails/blob/ma
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'store_request_id', '~> 0.1.0'
+gem 'store_request_id', '~> 0.2.0'
 ```
 
 And then execute:
