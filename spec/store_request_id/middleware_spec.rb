@@ -1,9 +1,6 @@
 require 'spec_helper'
 require 'securerandom'
-require 'active_support/concern'
-require 'active_support/deprecation'
-require 'action_dispatch/http/mime_type'
-require 'action_dispatch/http/request'
+require 'action_dispatch'
 require 'store_request_id/middleware'
 require 'action_dispatch/middleware/request_id'
 
