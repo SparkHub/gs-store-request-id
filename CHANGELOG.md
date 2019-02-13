@@ -1,7 +1,12 @@
 # Change Log
 
+## [0.3.1](https://github.com/SparkHub/gs-store-request-id/tree/v0.3.1) (2019-02-13)
+[Full Changelog](https://github.com/SparkHub/gs-store-request-id/compare/v0.3.0...v0.3.1)
+
+** Fix error NameError: uninitialized constant StoreRequestId::BlueGreenMiddleware
+
 ## [0.3.0](https://github.com/SparkHub/gs-store-request-id/tree/v0.3.0) (2019-02-08)
-[Full Changelog](https://github.com/SparkHub/gs-store-request-id/compare/v0.1.0...v0.2.0)
+[Full Changelog](https://github.com/SparkHub/gs-store-request-id/compare/v0.2.0...v0.3.0)
 
 **Implementing Blue/Green feature**
 - New Middleware to manage the Blue/Green feature:
