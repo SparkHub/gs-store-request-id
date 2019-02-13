@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'store_request_id/middleware'
+require 'store_request_id/blue_green_middleware'
 
 module StoreRequestId
   class Railtie < Rails::Railtie
