@@ -1,5 +1,13 @@
 # Change Log
 
+## [0.4.0](https://github.com/SparkHub/gs-store-request-id/tree/v0.4.0) (2019-07-10)
+[Full Changelog](https://github.com/SparkHub/gs-store-request-id/compare/v0.3.1...v0.4.0)
+
+** Fix error on incorrect Blue/Green values
+
+The `StoreRequestId.blue_green` was always returning `blue`, regarless on the
+value in `X-GS-BGenv` header.
+
 ## [0.3.1](https://github.com/SparkHub/gs-store-request-id/tree/v0.3.1) (2019-02-13)
 [Full Changelog](https://github.com/SparkHub/gs-store-request-id/compare/v0.3.0...v0.3.1)
 
