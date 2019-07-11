@@ -42,7 +42,7 @@ describe StoreRequestId::BlueGreenMiddleware do
   values.each do |input, expected|
     context "#{expected} when header says #{input}" do
       let(:env) do
-        { 'X-GS-BGEnv' => input }
+        { 'HTTP_X_GS_BGENV' => input }
       end
       it 'persist BG header in :bg' do
         expect(response.status).to eq(200)
