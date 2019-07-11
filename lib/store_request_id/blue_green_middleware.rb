@@ -27,7 +27,8 @@ module StoreRequestId
       private
 
       def bg
-        @bg ||= VALUES.fetch(self[HEADER], 'blue')
+        req = ::ActionDispatch::Request.new(self)
+        @bg ||= VALUES.fetch(req.headers[HEADER], 'blue')
       end
 
       def processed
