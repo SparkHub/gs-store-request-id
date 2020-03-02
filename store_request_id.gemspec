@@ -7,8 +7,8 @@ require 'store_request_id/version'
 Gem::Specification.new do |spec|
   spec.name          = 'store_request_id'
   spec.version       = StoreRequestId::VERSION
-  spec.authors       = ['Guidespark', 'Maxime Chaisse-Leal']
-  spec.email         = ['sysadmin@guidespark.com', 'maxime.chaisseleal@gmail.com']
+  spec.authors       = ['Guidespark']
+  spec.email         = ['sysadmin@guidespark.com']
 
   spec.summary       = 'Store the unique request id within a global state.'
   spec.description   = 'Store the unique request id within a global state.'
@@ -25,7 +25,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'actionpack', '>= 3.0.2'
   spec.add_dependency 'activesupport', RUBY_VERSION >= '2.2.2' ? '>= 3.0.2' : '< 5.1.3'
 
-  spec.add_development_dependency 'bundler', '~> 1.14'
-  spec.add_development_dependency 'rake', '~> 10.0'
+  spec.add_development_dependency 'bundler', '~> 1.17'
+  spec.add_development_dependency 'rake', '~> 13.0.1'
   spec.add_development_dependency 'rspec', '~> 3.0'
 end
