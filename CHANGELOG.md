@@ -1,5 +1,12 @@
 # Change Log
 
+## [0.4.1](https://github.com/SparkHub/gs-store-request-id/tree/v0.4.1) (2021-05-13)
+[Full Changelog](https://github.com/SparkHub/gs-store-request-id/compare/v0.4.0...v0.4.1)
+
+- Fix security vulnerability (bundler and rake)
+- Update gem information (author, email)
+- Fix spec constant `ActionDispatch::RequestId::X_REQUEST_ID` not defined
+
 ## [0.4.0](https://github.com/SparkHub/gs-store-request-id/tree/v0.4.0) (2019-07-10)
 [Full Changelog](https://github.com/SparkHub/gs-store-request-id/compare/v0.3.1...v0.4.0)
 
