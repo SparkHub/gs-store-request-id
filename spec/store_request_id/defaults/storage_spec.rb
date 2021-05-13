@@ -10,7 +10,6 @@ describe StoreRequestId::Defaults::Storage do
 
       context 'with undefined :X_REQUEST_ID' do
         before(:each) do
-          ActionDispatch::RequestId.send(:remove_const, 'X_REQUEST_ID') if RUBY_VERSION >= '2.2.2'
           described_class.send(:remove_const, 'DEFAULT_KEY')
           described_class::DEFAULT_KEY = 'My-Key'
         end
