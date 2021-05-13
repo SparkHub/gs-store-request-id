@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'https://registry.guidespark.net/repository/gs-rubygems-full'
 
 # Specify your gem's dependencies in store_request_id.gemspec
 gemspec
